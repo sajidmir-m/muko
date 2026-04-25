@@ -355,18 +355,6 @@ export default function App() {
     scrollTo("gallery");
   };
 
-  // Temporary: jump through scenes so you can preview everything now.
-  const previewFlow = async () => {
-    momentsStartedRef.current = false;
-    setShowVideo(false);
-    setTyped("");
-    setScene("surprise");
-    scrollTo("surprise");
-    await delay(1400);
-    setScene("heart");
-    scrollTo("heart");
-  };
-
   // Auto-advance from Fiery Heart after 5 seconds
   useEffect(() => {
     if (scene !== "heart") return;
@@ -426,14 +414,6 @@ export default function App() {
                 <span>{timeParts.s}</span>
               </div>
               <div className="countdown__sub">For you, with all my heart.</div>
-            </div>
-
-            <div className="previewRow">
-              <button className="previewBtn" type="button" onClick={previewFlow}>
-                <span className="previewBtn__bg" aria-hidden="true" />
-                <span className="previewBtn__text">Preview Now ✨</span>
-              </button>
-              <div className="previewHint">Temporary button to test the whole experience.</div>
             </div>
           </div>
           <div className="scene__footer">Stay here… and watch the stars.</div>

@@ -204,59 +204,6 @@ body{
   text-align:center;
 }
 
-.previewRow{
-  margin-top: 16px;
-  display:flex;
-  flex-direction: column;
-  gap: 10px;
-  align-items: center;
-}
-.previewBtn{
-  position:relative;
-  border:0;
-  color:var(--text);
-  padding: 12px 16px;
-  border-radius: 999px;
-  cursor:pointer;
-  font-weight: 760;
-  letter-spacing:.2px;
-  background: transparent;
-  transform: translateZ(0);
-}
-.previewBtn__bg{
-  position:absolute;
-  inset:0;
-  border-radius:999px;
-  background:
-    radial-gradient(220px 140px at 30% 30%, rgba(255,79,216,.28), transparent 60%),
-    radial-gradient(240px 180px at 70% 70%, rgba(138,91,255,.22), transparent 62%),
-    linear-gradient(90deg, rgba(255,79,216,.22), rgba(138,91,255,.18));
-  border:1px solid rgba(255,255,255,.16);
-  box-shadow: 0 16px 48px rgba(0,0,0,.44), 0 0 36px rgba(255,79,216,.14);
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
-  transition: transform .22s ease, box-shadow .22s ease, filter .22s ease;
-  animation: previewPulse 1.9s ease-in-out infinite;
-}
-.previewBtn__text{position:relative}
-.previewBtn:hover .previewBtn__bg{
-  transform: scale(1.04);
-  box-shadow: 0 20px 58px rgba(0,0,0,.52), 0 0 52px rgba(255,79,216,.20);
-  filter: saturate(1.15);
-}
-.previewBtn:active .previewBtn__bg{transform: scale(.99)}
-.previewBtn:focus-visible{outline:none}
-.previewBtn:focus-visible .previewBtn__bg{box-shadow: 0 0 0 3px rgba(255,79,216,.25), 0 16px 48px rgba(0,0,0,.44)}
-.previewHint{
-  font-size:12px;
-  opacity:.68;
-  text-align:center;
-}
-@keyframes previewPulse{
-  0%,100%{transform: scale(1); filter: saturate(1)}
-  50%{transform: scale(1.03); filter: saturate(1.18)}
-}
-
 .bigGlow{
   margin:0;
   font-size: clamp(42px, 6vw, 70px);
